@@ -272,11 +272,13 @@
   <div class="sample-cta">
     <h3>Not ready to buy? Get 5 workflows free.</h3>
     <p>Enter your email and we'll send you 5 of the best workflows from the guide — no strings attached.</p>
-    <form style="display:flex; gap:12px; max-width:440px; margin:0 auto; flex-wrap:wrap;" onsubmit="return false;">
-      <input type="email" placeholder="your@email.com" style="flex:1; min-width:220px; padding:12px 16px; border:1px solid var(--border); border-radius:8px; font-size:0.95rem; outline:none;">
+    <form action="https://formspree.io/f/agent@sosys.io" method="POST" style="display:flex; gap:12px; max-width:440px; margin:0 auto; flex-wrap:wrap;">
+      <input type="email" name="email" placeholder="your@email.com" required style="flex:1; min-width:220px; padding:12px 16px; border:1px solid var(--border); border-radius:8px; font-size:0.95rem; outline:none;">
+      <input type="hidden" name="_subject" value="Free 5 Prompts Request — AI Workflow Blueprint">
+      <input type="hidden" name="_next" value="https://admin-sosys.github.io/ai-workflow-blueprint/freeprompts.html">
       <button type="submit" style="background:var(--purple); color:white; border:none; padding:12px 20px; border-radius:8px; font-weight:700; cursor:pointer; font-size:0.95rem;">Send My 5 Prompts</button>
     </form>
-    <p style="font-size:0.8rem; margin-top:12px; color:var(--gray);">No spam. Unsubscribe anytime.</p>
+    <p style="font-size:0.8rem; margin-top:12px; color:var(--gray);">No spam. Unsubscribe anytime. We'll email you the PDF within minutes.</p>
   </div>
 </section>
 </div>
