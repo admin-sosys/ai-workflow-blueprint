@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AI Workflow Blueprint — 50 AI Workflows That Replace 50 Hours of Work</title>
+<meta name="description" content="50 tested AI workflows with before/after proof. Works with ChatGPT, Claude, and Gemini. Stop typing vague prompts and getting useless output.">
+<meta property="og:title" content="AI Workflow Blueprint — 50 AI Workflows That Replace 50 Hours of Work">
+<meta property="og:description" content="50 copy-paste prompts with before/after proof. Works with ChatGPT, Claude, and Gemini. $9 to start.">
+<meta property="og:type" content="website">
+<style>
+  *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+  :root {
+    --dark: #0D1117;
+    --purple: #6E40C9;
+    --blue: #1F6FEB;
+    --green: #238636;
+    --red: #DA3633;
+    --gray: #8B949E;
+    --bg: #F6F8FA;
+    --white: #FFFFFF;
+    --border: #E1E4E8;
+    --card: #FFFFFF;
+  }
+  body { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; background: var(--white); color: var(--dark); line-height: 1.6; }
+  a { color: var(--purple); }
+
+  /* NAV */
+  nav { background: var(--dark); padding: 12px 24px; display: flex; justify-content: space-between; align-items: center; position: sticky; top: 0; z-index: 100; }
+  .nav-brand { color: var(--white); font-weight: 700; font-size: 0.95rem; }
+  .nav-cta { background: var(--purple); color: var(--white); padding: 8px 18px; border-radius: 6px; font-weight: 600; font-size: 0.85rem; text-decoration: none; }
+  .nav-cta:hover { background: #5a30b0; }
+
+  /* HERO */
+  .hero { background: var(--dark); color: var(--white); text-align: center; padding: 80px 24px 60px; }
+  .hero-eyebrow { color: var(--purple); font-weight: 700; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 2px; margin-bottom: 16px; }
+  .hero h1 { font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 800; line-height: 1.15; margin-bottom: 24px; max-width: 800px; margin-left: auto; margin-right: auto; }
+  .hero h1 span { color: var(--purple); }
+  .hero-sub { font-size: 1.15rem; color: #C9D1D9; max-width: 580px; margin: 0 auto 32px; }
+  .hero-tools { display: flex; justify-content: center; gap: 12px; flex-wrap: wrap; margin-bottom: 40px; }
+  .tool-badge { background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.15); border-radius: 20px; padding: 6px 14px; font-size: 0.85rem; color: #C9D1D9; }
+  .tool-badge strong { color: var(--white); }
+  .hero-buttons { display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .btn-primary { background: var(--purple); color: var(--white); padding: 14px 32px; border-radius: 8px; font-weight: 700; font-size: 1.05rem; text-decoration: none; transition: background 0.2s; }
+  .btn-primary:hover { background: #5a30b0; }
+  .btn-secondary { background: transparent; color: var(--white); padding: 14px 32px; border-radius: 8px; font-weight: 600; font-size: 1.05rem; text-decoration: none; border: 2px solid rgba(255,255,255,0.3); transition: border-color 0.2s; }
+  .btn-secondary:hover { border-color: rgba(255,255,255,0.7); }
+  .price-note { margin-top: 16px; color: var(--gray); font-size: 0.9rem; }
+
+  /* STATS */
+  .stats { background: var(--bg); border-bottom: 1px solid var(--border); padding: 32px 24px; }
+  .stats-grid { display: flex; justify-content: center; gap: 48px; flex-wrap: wrap; max-width: 700px; margin: 0 auto; text-align: center; }
+  .stat-num { font-size: 2.5rem; font-weight: 800; color: var(--purple); display: block; line-height: 1; }
+  .stat-label { font-size: 0.85rem; color: var(--gray); margin-top: 4px; }
+
+  /* MAIN SECTIONS */
+  section { padding: 64px 24px; max-width: 860px; margin: 0 auto; }
+  h2 { font-size: 1.9rem; font-weight: 800; margin-bottom: 12px; }
+  .section-sub { color: var(--gray); font-size: 1.05rem; margin-bottom: 40px; }
+  .divider { width: 48px; height: 4px; background: var(--purple); border-radius: 2px; margin: 12px 0 32px; }
+
+  /* PROBLEM */
+  .problem-bg { background: var(--bg); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+  .problem-bg section { max-width: 860px; }
+  .problem-callout { background: var(--white); border: 1px solid var(--border); border-left: 4px solid var(--red); border-radius: 0 8px 8px 0; padding: 16px 20px; margin-bottom: 16px; font-size: 0.95rem; }
+  .problem-callout .label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--red); margin-bottom: 4px; }
+
+  /* BEFORE / AFTER */
+  .ba-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 16px; }
+  @media (max-width: 600px) { .ba-grid { grid-template-columns: 1fr; } }
+  .ba-box { border-radius: 8px; padding: 16px; font-size: 0.9rem; line-height: 1.6; }
+  .ba-box.before { background: #FFF5F5; border: 1px solid #FFCCCC; }
+  .ba-box.after { background: #F0FFF4; border: 1px solid #A7F3D0; }
+  .ba-label { font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; margin-bottom: 8px; }
+  .ba-label.bad { color: var(--red); }
+  .ba-label.good { color: var(--green); }
+
+  /* WHAT'S INSIDE */
+  .tier-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 24px; }
+  @media (max-width: 600px) { .tier-grid { grid-template-columns: 1fr; } }
+  .tier-card { border: 1px solid var(--border); border-radius: 12px; padding: 28px; position: relative; }
+  .tier-card.featured { border-color: var(--purple); box-shadow: 0 0 0 3px rgba(110,64,201,0.15); }
+  .tier-badge { position: absolute; top: -12px; left: 50%; transform: translateX(-50%); background: var(--purple); color: var(--white); font-size: 0.75rem; font-weight: 700; padding: 4px 12px; border-radius: 12px; white-space: nowrap; }
+  .tier-price { font-size: 2.5rem; font-weight: 800; color: var(--dark); line-height: 1; margin: 16px 0 4px; }
+  .tier-name { font-weight: 700; font-size: 1.1rem; margin-bottom: 16px; }
+  .tier-items { list-style: none; }
+  .tier-items li { padding: 6px 0; font-size: 0.9rem; color: #444; border-bottom: 1px solid var(--bg); display: flex; gap: 8px; align-items: flex-start; }
+  .tier-items li::before { content: '✓'; color: var(--green); font-weight: 700; flex-shrink: 0; margin-top: 1px; }
+  .tier-cta { display: block; text-align: center; margin-top: 20px; padding: 12px; border-radius: 8px; font-weight: 700; text-decoration: none; font-size: 0.95rem; }
+  .tier-cta.primary { background: var(--purple); color: var(--white); }
+  .tier-cta.secondary { background: var(--bg); color: var(--dark); border: 1px solid var(--border); }
+
+  /* CATEGORY LIST */
+  .cat-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(220px, 1fr)); gap: 12px; }
+  .cat-item { background: var(--bg); border: 1px solid var(--border); border-radius: 8px; padding: 14px 16px; font-size: 0.9rem; }
+  .cat-name { font-weight: 700; margin-bottom: 4px; }
+  .cat-count { font-size: 0.8rem; color: var(--gray); }
+
+  /* FAQ */
+  .faq-item { border-bottom: 1px solid var(--border); padding: 20px 0; }
+  .faq-q { font-weight: 700; font-size: 1rem; margin-bottom: 8px; }
+  .faq-a { color: #444; font-size: 0.95rem; }
+
+  /* FREE SAMPLE */
+  .sample-cta { background: var(--bg); border: 1px solid var(--border); border-radius: 12px; padding: 36px; text-align: center; }
+  .sample-cta h3 { font-size: 1.4rem; margin-bottom: 8px; }
+  .sample-cta p { color: var(--gray); margin-bottom: 24px; }
+
+  /* FOOTER */
+  footer { background: var(--dark); color: var(--gray); padding: 40px 24px; text-align: center; font-size: 0.85rem; }
+  footer strong { color: var(--white); }
+</style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav>
+  <span class="nav-brand">AI Workflow Blueprint</span>
+  <a href="#pricing" class="nav-cta">Get It — $9</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <p class="hero-eyebrow">50 Tested AI Workflows</p>
+  <h1>Stop Typing Vague Prompts.<br><span>Start Getting Real Work Done.</span></h1>
+  <p class="hero-sub">Copy-paste AI workflows with before/after proof — for entrepreneurs, freelancers, and small business owners who want AI to actually save them time.</p>
+  <div class="hero-tools">
+    <span class="tool-badge"><strong>ChatGPT</strong> ✓</span>
+    <span class="tool-badge"><strong>Claude</strong> ✓</span>
+    <span class="tool-badge"><strong>Gemini</strong> ✓</span>
+  </div>
+  <div class="hero-buttons">
+    <a href="#pricing" class="btn-primary">Get the PDF — $9</a>
+    <a href="#pricing" class="btn-secondary">See Complete Bundle — $27</a>
+  </div>
+  <p class="price-note">64-page PDF. Instant download. No subscription.</p>
+</div>
+
+<!-- STATS -->
+<div class="stats">
+  <div class="stats-grid">
+    <div><span class="stat-num">50</span><div class="stat-label">Tested Workflows</div></div>
+    <div><span class="stat-num">8</span><div class="stat-label">Categories</div></div>
+    <div><span class="stat-num">3</span><div class="stat-label">AI Tools Covered</div></div>
+    <div><span class="stat-num">64</span><div class="stat-label">Pages</div></div>
+  </div>
+</div>
+
+<!-- PROBLEM -->
+<div class="problem-bg">
+<section>
+  <h2>The Problem With How Most People Use AI</h2>
+  <div class="divider"></div>
+  <p class="section-sub">You're not getting bad output because the AI is bad. You're getting bad output because vague prompts produce vague results.</p>
+
+  <div class="problem-callout">
+    <div class="label">What you type</div>
+    "Write me a blog post about productivity."
+  </div>
+  <div class="problem-callout">
+    <div class="label">What you get back</div>
+    A generic 5-paragraph essay that sounds like it was written by someone who has never had a job, starting with "In today's fast-paced world..."
+  </div>
+
+  <p style="margin-top: 24px; font-size: 1rem;">The fix isn't "be more specific." It's knowing <em>exactly what specific looks like</em> for each type of task. That's what this guide is.</p>
+</section>
+</div>
+
+<!-- BEFORE / AFTER -->
+<section>
+  <h2>Before vs. After — Real Example</h2>
+  <div class="divider"></div>
+  <p class="section-sub" style="margin-bottom: 24px;"><strong>Workflow W001: Turn scattered notes into a polished blog post</strong></p>
+
+  <div class="ba-grid">
+    <div class="ba-box before">
+      <div class="ba-label bad">✗ What most people type</div>
+      "Turn my notes into a blog post: [pastes messy bullet points]"
+      <div style="margin-top: 10px; font-style: italic; font-size: 0.85rem; color: #7A0000;">Result: A mechanical listicle. Reads like your notes got a light grammar pass — no voice, no flow, no hook.</div>
+    </div>
+    <div class="ba-box after">
+      <div class="ba-label good">✓ What you should type</div>
+      "You are a professional content strategist. I'm going to give you a brain-dump of rough notes on [TOPIC]. Transform them into a complete, well-structured post of [WORD COUNT] for [TARGET READER]. Open with a hook that speaks to their frustration, use clear H2 subheadings, write in a [TONE] voice. Synthesize — don't reorganize. Notes: [PASTE HERE]"
+      <div style="margin-top: 10px; font-style: italic; font-size: 0.85rem; color: #004429;">Result: An actual article with narrative flow, a strong opening, and a conclusion that doesn't repeat the intro.</div>
+    </div>
+  </div>
+  <p style="margin-top: 20px; color: var(--gray); font-size: 0.9rem; text-align: center;">Every one of the 50 workflows follows this same format.</p>
+</section>
+
+<!-- WHAT'S INSIDE -->
+<section id="pricing">
+  <h2>What's Inside</h2>
+  <div class="divider"></div>
+  <div class="tier-grid">
+    <div class="tier-card">
+      <div class="tier-price">$9</div>
+      <div class="tier-name">AI Workflow Blueprint PDF</div>
+      <ul class="tier-items">
+        <li>50 copy-paste AI workflows</li>
+        <li>Bad prompt → good prompt for each</li>
+        <li>Before/after output comparison</li>
+        <li>8 categories of business tasks</li>
+        <li>Works with ChatGPT, Claude &amp; Gemini</li>
+        <li>64 pages, instant download</li>
+      </ul>
+      <a href="PAYHIP_URL_PLACEHOLDER" class="tier-cta secondary">Get the PDF — $9</a>
+    </div>
+    <div class="tier-card featured">
+      <span class="tier-badge">Most Popular</span>
+      <div class="tier-price">$27</div>
+      <div class="tier-name">Complete Bundle</div>
+      <ul class="tier-items">
+        <li>Everything in the $9 tier</li>
+        <li>5-Day Quick Start Workbook (interactive)</li>
+        <li>AI Tool Decision Matrix (ChatGPT vs Claude vs Gemini)</li>
+        <li>AI Jargon Cheat Sheet (50 terms, plain English)</li>
+        <li>Notion workspace template — all 50 workflows searchable</li>
+      </ul>
+      <a href="PAYHIP_BUNDLE_URL_PLACEHOLDER" class="tier-cta primary">Get the Bundle — $27</a>
+    </div>
+  </div>
+</section>
+
+<!-- CATEGORIES -->
+<div class="problem-bg">
+<section>
+  <h2>8 Categories. 50 Workflows. All Your Real Tasks.</h2>
+  <div class="divider"></div>
+  <div class="cat-grid">
+    <div class="cat-item"><div class="cat-name">Writing &amp; Content</div><div class="cat-count">8 workflows — blog posts, newsletters, repurposing</div></div>
+    <div class="cat-item"><div class="cat-name">Marketing &amp; Sales Copy</div><div class="cat-count">8 workflows — ads, landing pages, product descriptions</div></div>
+    <div class="cat-item"><div class="cat-name">Email &amp; Communication</div><div class="cat-count">6 workflows — outreach, follow-ups, client emails</div></div>
+    <div class="cat-item"><div class="cat-name">Research &amp; Analysis</div><div class="cat-count">6 workflows — competitor research, document summaries</div></div>
+    <div class="cat-item"><div class="cat-name">Business Operations</div><div class="cat-count">6 workflows — SOPs, job descriptions, meeting notes</div></div>
+    <div class="cat-item"><div class="cat-name">Social Media</div><div class="cat-count">6 workflows — captions, hooks, content calendars</div></div>
+    <div class="cat-item"><div class="cat-name">Productivity</div><div class="cat-count">6 workflows — planning, delegation, decision frameworks</div></div>
+    <div class="cat-item"><div class="cat-name">Customer Service</div><div class="cat-count">4 workflows — support responses, difficult conversations</div></div>
+  </div>
+</section>
+</div>
+
+<!-- FAQ -->
+<section>
+  <h2>Common Questions</h2>
+  <div class="divider"></div>
+
+  <div class="faq-item">
+    <div class="faq-q">Do I need to pay for an AI tool to use this?</div>
+    <div class="faq-a">No. Every workflow is tested on the free tiers of ChatGPT, Claude, and Gemini. You don't need a paid subscription to start, though paid tiers do give better output on complex tasks.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">What if I've never used AI before?</div>
+    <div class="faq-a">This is built for you. The prompts are designed to be copy-paste ready — you replace the parts in [BRACKETS] with your specific information and run it. No technical knowledge required.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Which AI tool works best with these prompts?</div>
+    <div class="faq-a">All three (ChatGPT, Claude, and Gemini) work with every prompt. Where one tool noticeably outperforms the others for a specific task, the workflow includes a note. Generally, Claude excels at writing and analysis, ChatGPT at broad tasks, and Gemini at research.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">How is this different from free prompt lists I've seen?</div>
+    <div class="faq-a">Free prompt lists give you prompts without context. This gives you the bad prompt, the good prompt, why it works better, actual output comparisons, and refinement tips. It's the difference between a recipe and a cooking lesson.</div>
+  </div>
+  <div class="faq-item">
+    <div class="faq-q">Is there a refund policy?</div>
+    <div class="faq-a">Yes — if the guide isn't useful to you within 7 days, reply to your purchase email for a full refund, no questions asked.</div>
+  </div>
+</section>
+
+<!-- FREE SAMPLE -->
+<div class="problem-bg">
+<section>
+  <div class="sample-cta">
+    <h3>Not ready to buy? Get 5 workflows free.</h3>
+    <p>Enter your email and we'll send you 5 of the best workflows from the guide — no strings attached.</p>
+    <form style="display:flex; gap:12px; max-width:440px; margin:0 auto; flex-wrap:wrap;" onsubmit="return false;">
+      <input type="email" placeholder="your@email.com" style="flex:1; min-width:220px; padding:12px 16px; border:1px solid var(--border); border-radius:8px; font-size:0.95rem; outline:none;">
+      <button type="submit" style="background:var(--purple); color:white; border:none; padding:12px 20px; border-radius:8px; font-weight:700; cursor:pointer; font-size:0.95rem;">Send My 5 Prompts</button>
+    </form>
+    <p style="font-size:0.8rem; margin-top:12px; color:var(--gray);">No spam. Unsubscribe anytime.</p>
+  </div>
+</section>
+</div>
+
+<!-- FOOTER -->
+<footer>
+  <p><strong>AI Workflow Blueprint</strong></p>
+  <p style="margin-top:8px;">50 tested AI workflows · ChatGPT, Claude &amp; Gemini · Instant digital download</p>
+  <p style="margin-top:12px;">© 2026 AI Workflow Blueprint · <a href="mailto:agent@sosys.io" style="color:var(--gray);">Contact</a></p>
+</footer>
+
+</body>
+</html>
